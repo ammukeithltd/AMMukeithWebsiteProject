@@ -1,0 +1,3 @@
+import { ArrowUpRight,Home,Building2 } from 'lucide-react';
+import { propertySections } from '@/lib/property-sections';
+export function PropertySections({group,active}:{group?:'sale'|'let';active?:string}){return <nav className="property-sections" aria-label="Property sections">{propertySections.filter(s=>!group||s.transaction===group).map(s=><a key={s.id} href={'/'+s.id} aria-current={active===s.id?'page':undefined}><span className="section-category">{s.transaction==='let'?'TO LET':'FOR SALE'}</span><span className="section-kind">{s.sector==='residential'?<Home size={23}/>:<Building2 size={23}/>} {s.sector==='residential'?'Residential':'Commercial'}<ArrowUpRight size={18}/></span></a>)}</nav>}

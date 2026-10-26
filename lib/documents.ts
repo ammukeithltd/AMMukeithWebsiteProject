@@ -1,0 +1,7 @@
+export const documents = [
+  {id:'seller-guide',title:'Keller Williams Seller’s Guide',publisher:'Keller Williams',description:'The full guide to preparing for and progressing a property sale.',file:'/documents/kw-sellers-guide.pdf',pages:15,bytes:5751678,sections:['seller-guide']},
+  {id:'buyer-guide',title:'Keller Williams Buyer’s Guide',publisher:'Keller Williams',description:'The full guide to finding and buying your next home.',file:'/documents/kw-buyers-guide.pdf',pages:12,bytes:1200828,sections:['buyer-guide']},
+  {id:'tenancy-guide',title:'Before you start renting',publisher:'Ministry of Housing, Communities & Local Government · Easy Read',description:'A guide to preparing for a tenancy, using easier words and pictures.',file:'/documents/before-starting-a-tenancy-guide.pdf',pages:31,bytes:14685692,sections:['tenant-guide']},
+  {id:'seller-terms',title:'Seller terms of business',publisher:'Keller Williams · Seller representation · V4.4',description:'Read the seller terms alongside the Client Details Form for your proposed instruction.',file:'/documents/kw-seller-terms-of-business.pdf',pages:6,bytes:170909,sections:['terms-of-business']},
+  {id:'landlord-terms',title:'KW Move Landlord Terms',publisher:'KW Move · Version 5',description:'Terms covering Let Only, Rent Collection and Managed Service.',file:'/documents/kw-move-landlord-terms-v5.pdf',pages:21,bytes:4301846,sections:['landlord-terms','terms-of-business']},
+];

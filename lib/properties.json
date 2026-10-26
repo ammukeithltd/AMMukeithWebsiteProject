@@ -1,0 +1,80 @@
+[
+  {
+    "id": "quaker-street-london-e1",
+    "title": "Quaker Street, London, E1",
+    "image": "/images/quaker-street-london-e1.jpg",
+    "url": "https://www.kwuk.com/property/quaker-street-london-e1/",
+    "beds": 2,
+    "baths": 1,
+    "type": "Flat",
+    "price": 450000,
+    "qualifier": "Guide Price",
+    "status": "For sale",
+    "description": "Contact Abdhool to discuss this property, arrange a viewing and confirm current availability."
+  },
+  {
+    "id": "collingwood-street-london-e1",
+    "title": "Collingwood Street, London, E1",
+    "image": "/images/collingwood-street-london-e1.jpg",
+    "url": "https://www.kwuk.com/property/collingwood-street-london-e1/",
+    "beds": 2,
+    "baths": 1,
+    "type": "Flat",
+    "price": 375000,
+    "qualifier": "Guide Price",
+    "status": "For sale",
+    "description": "Contact Abdhool to discuss this property, arrange a viewing and confirm current availability."
+  },
+  {
+    "id": "headlam-street-london-e1",
+    "title": "Headlam Street, London, E1",
+    "image": "/images/headlam-street-london-e1.jpg",
+    "url": "https://www.kwuk.com/property/headlam-street-london-e1/",
+    "beds": 3,
+    "baths": 1,
+    "type": "Flat",
+    "price": 430000,
+    "qualifier": "Guide Price",
+    "status": "For sale",
+    "description": "Contact Abdhool to discuss this property, arrange a viewing and confirm current availability."
+  },
+  {
+    "id": "florence-elson-close-london-e12",
+    "title": "Florence Elson Close, London, E12",
+    "image": "/images/florence-elson-close-london-e12.jpg",
+    "url": "https://www.kwuk.com/property/florence-elson-close-london-e12/",
+    "beds": 2,
+    "baths": 1,
+    "type": "Terraced House",
+    "price": 400000,
+    "qualifier": "Guide Price",
+    "status": "For sale",
+    "description": "Contact Abdhool to discuss this property, arrange a viewing and confirm current availability."
+  },
+  {
+    "id": "cambridge-heath-road-london-e1",
+    "title": "Cambridge Heath Road, London, E1",
+    "image": "/images/cambridge-heath-road-london-e1.jpg",
+    "url": "https://www.kwuk.com/property/cambridge-heath-road-london-e1/",
+    "beds": 2,
+    "baths": 1,
+    "type": "Flat",
+    "price": 390000,
+    "qualifier": "Offers Over",
+    "status": "For sale",
+    "description": "Contact Abdhool to discuss this property, arrange a viewing and confirm current availability."
+  },
+  {
+    "id": "wyllen-close-london-e1",
+    "title": "Wyllen Close, London, E1",
+    "image": "/images/wyllen-close-london-e1.jpg",
+    "url": "https://www.kwuk.com/property/wyllen-close-london-e1/",
+    "beds": 3,
+    "baths": 1,
+    "type": "Flat",
+    "price": 450000,
+    "qualifier": "Offers Over",
+    "status": "For sale",
+    "description": "Contact Abdhool to discuss this property, arrange a viewing and confirm current availability."
+  }
+]

@@ -1,0 +1,1 @@
+export function KellerWilliamsAffiliation(){return <span className="brand-affiliation"><span>Operating through</span><img className="kw-brand-logo" src="/images/keller-williams-logo.svg" alt="Keller Williams" width="139" height="63"/></span>}

@@ -1,0 +1,15 @@
+'use client';
+import { useState } from 'react';
+import { Search } from 'lucide-react';
+import { type Property } from '@/lib/content';
+import { propertySections,matchesSection,monthlyRent,type PropertySection } from '@/lib/property-sections';
+import { PropertyCard } from './site';
+import { Choice } from './forms';
+export function PropertySearch({properties,section}:{properties:Property[];section?:PropertySection}){
+ const[q,setQ]=useState(''),[beds,setBeds]=useState('Any bedrooms'),[budget,setBudget]=useState('Any price'),[category,setCategory]=useState('All properties');
+ const current=section??propertySections.find(s=>s.title===category),rent=current?.transaction==='let';
+ const inSection=properties.filter(p=>!p.hidden&&(!current||matchesSection(p,current)));
+ const shown=inSection.filter(p=>p.title.toLowerCase().includes(q.toLowerCase())&&(current?.sector!=='residential'||beds==='Any bedrooms'||p.beds>=parseInt(beds))&&(!current||budget==='Any price'||(rent?monthlyRent(p):p.price)<=parseInt(budget.replace(/\D/g,''))));
+ const reset=()=>{setQ('');setBeds('Any bedrooms');setBudget('Any price')};
+ return <>{!section&&<label className="listing-category">Property section<Choice value={category} onChange={v=>{setCategory(v);reset()}} options={['All properties',...propertySections.map(s=>s.title)]} label="Property section"/></label>}<div className="property-filters"><label>Location or postcode<div className="search-input"><Search size={18}/><input value={q} onChange={e=>setQ(e.target.value)} placeholder="Search location or postcode"/></div></label>{current?.sector==='residential'&&<label>Bedrooms<Choice value={beds} onChange={setBeds} options={['Any bedrooms','1+ bedrooms','2+ bedrooms','3+ bedrooms','4+ bedrooms']} label="Minimum bedrooms"/></label>}{current&&<label>{rent?'Maximum monthly rent':'Maximum price'}<Choice value={budget} onChange={setBudget} options={rent?['Any price','£1,000','£1,500','£2,000','£3,000','£5,000','£10,000']:['Any price','£350,000','£400,000','£450,000','£500,000','£750,000','£1,000,000']} label={rent?'Maximum monthly rent':'Maximum price'}/></label>}</div>{rent&&<p className="source-note">Weekly and yearly rents are converted to a monthly equivalent for this filter. Each listing shows its advertised rent period.</p>}<p className="results-count" aria-live="polite">{shown.length} {shown.length===1?'property':'properties'}{current?' · '+current.title:''}</p>{shown.length?<div className="property-grid">{shown.map(p=><PropertyCard key={p.id} property={p}/>)}</div>:<div className="empty-state"><h3>{inSection.length?'No properties match your search.':'No properties listed in this section yet.'}</h3><p>{inSection.length?'Try another location or budget, or share your requirements with Abdhool.':'Looking for a property, or have one to sell or let? Speak directly with Abdhool about your plans.'}</p>{inSection.length>0&&<button className="button small" onClick={reset}>Clear filters</button>}<a className="text-link" href={section?'#enquire':'/contact'+(current?'?service='+encodeURIComponent(current.service):'')}>Talk to Abdhool</a></div>}</>
+}

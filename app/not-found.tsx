@@ -1,0 +1,1 @@
+export default function NotFound(){return <main id="main" className="section empty-state"><p className="eyebrow">PAGE NOT FOUND</p><h1>Let’s get you home.</h1><p>This page or property is no longer available.</p><a className="button" href="/">Back to the homepage</a></main>}
